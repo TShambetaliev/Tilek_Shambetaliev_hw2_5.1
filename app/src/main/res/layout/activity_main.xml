@@ -8,6 +8,12 @@
     android:background="@color/green">
 
     <TextView
+        android:layout_width="411dp"
+        android:layout_height="380dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -75,6 +81,7 @@
         android:layout_marginTop="20dp"/>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/log_facebook"
         app:cornerRadius="50dp"
         android:layout_width="350dp"
         android:layout_height="50dp"
@@ -82,9 +89,45 @@
         android:hint="Log in with Facebook"
         android:textStyle="bold"
         android:textSize="15sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/up_with_email"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/log_facebook"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/up_with_email" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/up_with_email"
+        app:cornerRadius="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Up with Email"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/log_facebook"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/game_now"
+        app:cornerRadius="50dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:text="GAME NOW"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/up_with_email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
